@@ -11,7 +11,33 @@
                 </h3>
             </div>
             <div class="card-body">
+                <table class="table table-borded table-striped">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($categories as $category)
+                            <tr>
+                                <td>{{$category->id}}</td>
+                                <td>{{$category->name}}</td>
+                                <td>{{$category->status == '1' ? 'Hidden' : 'Visible'}}</td>
+                                <td>
+                                    <a href="{{url('admin/category/'.$category->id.'/edit')}}" class="btn btn-success">Edit</a>
+                                    <a href="" class="btn btn-danger">Delete</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
 
+                <div>
+                    {{$categories->links()}}
+                </div>
             </div>
         </div>
     </div>
