@@ -54,7 +54,7 @@
                                     <td>{{$category->status == '1' ? 'Hidden' : 'Visible'}}</td>
                                     <td>
                                         <a href="{{url('admin/category/'.$category->id.'/edit')}}" class="btn btn-success">Edit</a>
-                                        <a href="" wire:click="destroyCategory({{$category->id}})" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger">Delete</a>
+                                        <a href="#" wire:click="deleteCategory({{$category->id}})" data-toggle="modal" data-target="#deleteModal" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
                             @endforeach
