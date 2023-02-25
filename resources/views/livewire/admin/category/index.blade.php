@@ -28,8 +28,7 @@
             <div class="card">
                 <div class="card-header">
                     <h3>Category
-                        <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm float-end">Add
-                            Category</a>
+                        <a href="{{ url('admin/category/create') }}" class="btn btn-primary btn-sm float-end">Add Category</a>
                     </h3>
                 </div>
                 <div class="card-body">
@@ -52,9 +51,7 @@
                                         <a href="{{ url('admin/category/' . $category->id . '/edit') }}" class="btn btn-success">Edit</a>
                                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deleteModal">
                                             <a href="#" wire:click="deleteCategory({{ $category->id }})">Delete</a>
-                                            
                                         </button>
-
                                     </td>
                                 </tr>
                             @endforeach
